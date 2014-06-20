@@ -1,10 +1,6 @@
 <template name="fullPageSigninForm">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 col-md-offset-3">
-          {{> signinForm}}
-      </div>
-    </div>
+  <div class="ui center aligned grid">
+    <div class="floated five wide column">{{> signinForm}}</div>
   </div>
 </template>
 
@@ -48,7 +44,7 @@
         </div>
       {{/if}}
       {{#if passwordLoginService}}
-        <form role="form" id="at-form-login" class="at-form" novalidate>
+        <div role="form" id="at-form-login" class="ui form segment" novalidate>
           {{#each fields}}
             {{#if displayField}}
               {{> atInput}}
@@ -57,8 +53,8 @@
           {{#if showForgotPassword}}
             <p><a href="{{forgotPwdLink}}" id="at-fpwd" class="{{disabled}}">{{t9n "forgotPassword"}}</a></p>
           {{/if}}
-          <button type='submit' class="submit btn btn-lg btn-default {{disabled}}" id="at-btn">{{buttonText}}</button>
-        </form>
+          <div type='submit' class="ui submit button {{disabled}}" id="at-btn">{{buttonText}}</div>
+        </div>
         {{#unless stateIs 'sgup'}}
           <p class="at-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{signUpLink}}" id="at-sgup" class="{{disabled}}">{{t9n "signUp"}}</a></p>
         {{/unless}}
@@ -128,24 +124,30 @@
 
 <template name='atSocial'>
   {{#if show}}
-        <button class="btn {{disabled}}" id="at-{{this}}" name="{{this}}">
+        <div class="ui button {{disabled}}" id="at-{{this}}" name="{{this}}">
           <i class="{{iconClass}}"></i> {{buttonText}}
-        </button>
+        </div>
   {{/if}}
 </template>
 
 
 <template name='atInput'>
-  <div class="form-group {{#if hasError}}has-error{{/if}} {{#if hasFeedback}}has-feedback{{/if}}">
+  <div class="field {{#if hasError}}error{{/if}}">
     {{#if displayFormLabels}}
-      <label for="AT_field_{{name}}" class="control-label">
+      <label>
         {{displayName}} {{#unless required}}({{t9n "optional"}}){{/unless}}
       </label>
     {{/if}}
-    <input type="{{type}}" class="form-control" id="AT_field_{{name}}" placeholder="{{placeholder}}" {{disabled}}>
-    {{#if hasFeedback}}
-      <span class="glyphicon glyphicon-remove form-control-feedback {{#unless hasError}}hide{{/unless}}"></span>
-    {{/if}}
-    <p class="help-block {{#unless hasError}}hide{{/unless}}">{{errorText}}</p>
+    <div class="ui left labeled input">
+      <input type="{{type}}" id="AT_field_{{name}}" placeholder="{{placeholder}}" {{disabled}}>
+      {{#if required}}
+        <div class="ui corner label">
+          <i class="icon asterisk"></i>
+        </div>
+      {{/if}}
+      {{#if hasError}}
+        <div class="ui red pointing prompt label transition visible" style="display: inline-block;">{{errorText}}</div>
+      {{/if}}
+    </div>
   </div>     
 </template>
