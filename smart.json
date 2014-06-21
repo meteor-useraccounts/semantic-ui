@@ -3,8 +3,8 @@
     "description": "Accounts Templates styled for Semantic UI.",
     "homepage": "http://accounts-templates.meteor.com",
     "author": "Luca Mussi <ing.luca.mussi@gmail.com> (https://github.com/splendido)",
-    "version": "0.0.1",
-    "git": "https://github.com/splendido/accounts-templates-semantic-ui.git",
+    "version": "0.0.2",
+    "git": "https://github.com/splendido/meteor-accounts-templates-semantic-ui.git",
     "packages": {
         "accounts-templates-core": {}        
     }
