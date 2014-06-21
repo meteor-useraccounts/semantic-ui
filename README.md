@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/splendido/accounts-templates-semantic-ui.svg?branch=master)](https://travis-ci.org/splendido/accounts-templates-semantic-ui)
+[![Build Status](https://travis-ci.org/splendido/meteor-accounts-templates-semantic-ui.svg?branch=master)](https://travis-ci.org/splendido/meteor-accounts-templates-semantic-ui)
 accounts-templates-semantic-ui
 ==============================
 
