@@ -6,6 +6,6 @@
     "version": "0.0.4",
     "git": "https://github.com/splendido/meteor-accounts-templates-semantic-ui.git",
     "packages": {
-        "accounts-templates-core": {}        
+        "accounts-templates-core": "0.0.12"        
     }
 }
