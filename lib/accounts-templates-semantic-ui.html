@@ -36,7 +36,6 @@
           </div>
         </div>
       {{/if}}
-
       {{#if overallError}}
         <div id="atError">
           <div class='ui error message'>{{overallError}}</div>
@@ -62,6 +61,20 @@
           	<p class="at-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{signUpLink}}" id="at-sgup" class="{{disabled}}">{{t9n "signUp"}}</a></p>
     			{{/if}}
         </div>
+      {{/if}}
+      {{#if showTermsLink}}
+        <p class="at-agreement">
+          {{t9n "clickAgree"}}
+          {{#if privacyUrl}}
+            <a href="{{privacyUrl}}" class="{{disabled}}">{{t9n "privacyPolicy"}}</a>
+          {{/if}}
+          {{#if showTermsAnd}}
+            {{t9n "and"}}
+          {{/if}}
+          {{#if termsUrl}}
+            <a href="{{termsUrl}}" class="{{disabled}}">{{t9n "terms"}}</a>
+          {{/if}}
+        </p>
       {{/if}}
       {{#if showSignOut}}
           <div class="text-center">
