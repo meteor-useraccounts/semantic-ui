@@ -2,7 +2,7 @@
 accounts-templates-semantic-ui
 ==============================
 
-Meteor sign up and sign in templates styled for twitter Semantic UI
+Meteor sign up and sign in templates styled for Semantic UI
 
 This package depends on [accounts-templates-core](https://atmospherejs.com/package/accounts-templates-core)
 
