@@ -1,0 +1,28 @@
+<template name='atInput'>
+  <div class="field {{#if hasError}}error{{/if}}">
+    {{#if displayFormLabels}}
+      <label>
+        {{displayName}}
+      </label>
+    {{/if}}
+    <div class="ui icon labeled input">
+      <input type="{{type}}" id="AT_field_{{name}}" placeholder="{{placeholder}}" {{disabled}}>
+      {{#if required}}
+        <div class="ui corner label">
+          <i class="icon asterisk"></i>
+        </div>
+      {{/if}}
+      {{#if hasFeedback}}
+        {{#if hasError}}
+          <i class="remove icon"></i>
+        {{/if}}
+        {{#if hasSuccess}}
+          <i class="green checkmark icon"></i>
+        {{/if}}
+      {{/if}}
+      {{#if hasError}}
+        <div class="ui red pointing prompt label transition visible" style="display: inline-block;">{{errorText}}</div>
+      {{/if}}
+    </div>
+  </div>     
+</template>

@@ -12,9 +12,14 @@ Package.on_use(function(api, where) {
     ], 'client');
 
     api.add_files([
-        'lib/accounts-templates-semantic-ui.html',
-        'lib/accounts-templates-semantic-ui.js',
-        'lib/accounts-templates-semantic-ui.less'
+        'lib/at_form.html',
+        'lib/at_form.js',
+        'lib/at_input.html',
+        'lib/at_input.js',
+        'lib/at_social.html',
+        'lib/at_social.js',
+        'lib/full_page_at_form.html',
+        'lib/at_semantic-ui.less'
     ], ['client']);
 
     api.use([

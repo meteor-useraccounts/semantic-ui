@@ -1,12 +1,4 @@
-<template name="fullPageSigninForm">
-  <div class="ui center aligned three column doubling page grid">
-    <div class="floated column">
-      {{> signinForm}}
-    </div>
-  </div>
-</template>
-
-<template name="signinForm">
+<template name="atForm">
   {{#unless hide}}
     <div class="ui fluid center aligned basic fitted segment at">
       {{#if showTitle}}
@@ -15,7 +7,7 @@
       {{#if showSignInLink}}
         <p class="at-signin-cta">
           {{t9n "ifYouAlreadyHaveAnAccount"}} 
-          <a href="{{signInLink}}" id="at-sgin" class="{{disabled}}">{{t9n "signin"}}</a>.
+          <a href="{{signInLink}}" id="at-signIn" class="at-link {{disabled}}">{{t9n "signin"}}</a>.
         </p>
       {{/if}}
       {{#if showLoginServices}}
@@ -53,13 +45,13 @@
               {{> atInput}}
             {{/each}}
             {{#if showForgotPasswordLink}}
-              <p><a href="{{forgotPwdLink}}" id="at-fpwd" class="{{disabled}}">{{t9n "forgotPassword"}}</a></p>
+              <p><a href="{{forgotPwdLink}}" id="at-forgotPwd" class="at-link {{disabled}}">{{t9n "forgotPassword"}}</a></p>
             {{/if}}
             <input type="submit" class="ui fluid submit {{submitDisabled}} {{disabled}} button" id="at-btn" value="{{buttonText}}">
           </form>
-    			{{#if showSignUpLink}}
-          	<p class="at-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{signUpLink}}" id="at-sgup" class="{{disabled}}">{{t9n "signUp"}}</a></p>
-    			{{/if}}
+          {{#if showSignUpLink}}
+            <p class="at-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{signUpLink}}" id="at-signUp" class="at-link {{disabled}}">{{t9n "signUp"}}</a></p>
+          {{/if}}
         </div>
       {{/if}}
       {{#if showTermsLink}}
@@ -76,42 +68,6 @@
           {{/if}}
         </p>
       {{/if}}
-      {{#if showSignOut}}
-          <div class="text-center">
-            <div class="ui fluid {{disabled}} button" id="at-btn-logout">{{t9n "signOut"}}</div>
-          </div>
-      {{/if}}
     </div>
   {{/unless}}
-</template>
-
-
-<template name='atSocial'>
-  {{#if show}}
-    <button class="ui fluid left labeled icon {{disabled}} {{iconClass}} button" id="at-{{this}}" name="{{this}}">
-      <i class="{{iconClass}} icon"></i> {{buttonText}}
-    </button>
-  {{/if}}
-</template>
-
-
-<template name='atInput'>
-  <div class="field {{#if hasError}}error{{/if}}">
-    {{#if displayFormLabels}}
-      <label>
-        {{displayName}}
-      </label>
-    {{/if}}
-    <div class="ui left labeled input">
-      <input type="{{type}}" id="AT_field_{{name}}" placeholder="{{placeholder}}" {{disabled}}>
-      {{#if required}}
-        <div class="ui corner label">
-          <i class="icon asterisk"></i>
-        </div>
-      {{/if}}
-      {{#if hasError}}
-        <div class="ui red pointing prompt label transition visible" style="display: inline-block;">{{errorText}}</div>
-      {{/if}}
-    </div>
-  </div>     
 </template>
