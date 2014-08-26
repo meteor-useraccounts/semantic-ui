@@ -7,7 +7,7 @@
       {{#if showSignInLink}}
         <p class="at-signin-cta">
           {{t9n "ifYouAlreadyHaveAnAccount"}} 
-          <a href="{{signInLink}}" id="at-signIn" class="at-link {{disabled}}">{{t9n "signin"}}</a>.
+          <a href="{{signInLink}}" id="at-signIn" class="at-link {{disabled}}">{{t9n "signin"}}</a>
         </p>
       {{/if}}
       {{#if showLoginServices}}
@@ -30,7 +30,11 @@
       {{/if}}
       {{#if overallError}}
         <div id="atError">
-          <div class='ui error message'>{{overallError}}</div>
+          <div class='ui error message'>
+            {{#each overallError}}
+              <p>{{this}}</p>
+            {{/each}}
+          </div>
         </div>
       {{/if}}
       {{#if result}}

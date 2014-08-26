@@ -6,16 +6,18 @@
       </label>
     {{/if}}
     <div class="ui icon labeled input">
-      <input type="{{type}}" id="AT_field_{{name}}" placeholder="{{placeholder}}" {{disabled}}>
+      <input type="{{type}}" id="AT_field_{{_id}}" name="AT_field_{{_id}}" placeholder="{{placeholder}}" {{disabled}}>
       {{#if required}}
         <div class="ui corner label">
           <i class="icon asterisk"></i>
         </div>
       {{/if}}
-      {{#if hasFeedback}}
+      {{#if negativeFeedback}}
         {{#if hasError}}
           <i class="remove icon"></i>
         {{/if}}
+      {{/if}}
+      {{#if positiveFeedback}}
         {{#if hasSuccess}}
           <i class="green checkmark icon"></i>
         {{/if}}
