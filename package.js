@@ -1,6 +1,6 @@
 Package.describe({
     summary: "Accounts Templates styled for Semantic UI.",
-    version: "0.0.29",
+    version: "0.0.30",
     name: "splendido:accounts-templates-semantic-ui",
     git: "https://github.com/splendido/accounts-templates-semantic-ui.git",
 });
