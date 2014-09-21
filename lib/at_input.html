@@ -5,13 +5,8 @@
         {{displayName}}
       </label>
     {{/if}}
-    <div class="ui icon labeled input">
+    <div class="ui labeled icon input">
       <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" {{disabled}} autocapitalize="none" autocorrect="off">
-      {{#if required}}
-        <div class="ui corner label">
-          <i class="icon asterisk"></i>
-        </div>
-      {{/if}}
       {{#if negativeFeedback}}
         {{#if hasError}}
           <i class="remove icon"></i>
@@ -21,6 +16,11 @@
         {{#if hasSuccess}}
           <i class="green checkmark icon"></i>
         {{/if}}
+      {{/if}}
+      {{#if required}}
+        <div class="ui corner label">
+          <i class="icon asterisk"></i>
+        </div>
       {{/if}}
       {{#if hasError}}
         <div class="ui red pointing prompt label transition visible">{{errorText}}</div>
