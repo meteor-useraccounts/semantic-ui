@@ -1,7 +1,7 @@
 <template name="atPwdForm">
-  <div class="at-pwd-form">  
+  <div class="at-pwd-form">
     <div class="ui left aligned basic fitted segment">
-      <div class="ui form" id="at-form" novalidate>
+      <form class="ui form" id="at-pwd-form" novalidate>
         {{#each fields}}
           {{> atInput}}
         {{/each}}
@@ -9,7 +9,7 @@
           {{> atPwdLink}}
         {{/if}}
         {{> atPwdFormBtn}}
-      </div>
+      </form>
     </div>
   </div>
 </template>
