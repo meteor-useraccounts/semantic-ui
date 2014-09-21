@@ -1,15 +1,30 @@
-<template name='atInput'>
-  <div class="at-input form-group {{#if hasError}}has-error{{/if}} {{#if hasSuccess}}has-success{{/if}} {{#if feedback}}has-feedback{{/if}}">
-    <label class="control-label {{#unless showLabels}}sr-only{{/unless}}" for="at-field-{{_id}}">
-      {{displayName}} {{#unless required}}{{optionalText}}{{/unless}}
-    </label>
-    <input type="{{type}}" class="form-control" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
-    {{#if negativeFeedback}}
-      <span class="glyphicon glyphicon-remove form-control-feedback {{#unless hasError}}hide{{/unless}}"></span>
+<template name="atInput">
+  <div class="at-input field {{#if hasError}}error{{/if}}">
+    {{#if showLabels}}
+      <label>
+        {{displayName}}
+      </label>
     {{/if}}
-    {{#if positiveFeedback}}
-      <span class="glyphicon glyphicon-ok form-control-feedback {{#unless hasSuccess}}hide{{/unless}}"></span>
-    {{/if}}
-    <span class="help-block {{#unless hasError}}hide{{/unless}}">{{errorText}}</span>
+    <div class="ui icon labeled input">
+      <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" {{disabled}} autocapitalize="none" autocorrect="off">
+      {{#if required}}
+        <div class="ui corner label">
+          <i class="icon asterisk"></i>
+        </div>
+      {{/if}}
+      {{#if negativeFeedback}}
+        {{#if hasError}}
+          <i class="remove icon"></i>
+        {{/if}}
+      {{/if}}
+      {{#if positiveFeedback}}
+        {{#if hasSuccess}}
+          <i class="green checkmark icon"></i>
+        {{/if}}
+      {{/if}}
+      {{#if hasError}}
+        <div class="ui red pointing prompt label transition visible">{{errorText}}</div>
+      {{/if}}
+    </div>
   </div>
 </template>

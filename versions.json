@@ -2,14 +2,14 @@
   "dependencies": [
     [
       "accounts-base",
-      "1.0.0"
-    ],
-    [
-      "accounts-password",
-      "1.0.0"
+      "1.1.0"
     ],
     [
       "application-configuration",
+      "1.0.2"
+    ],
+    [
+      "base64",
       "1.0.0"
     ],
     [
@@ -25,6 +25,10 @@
       "1.0.0"
     ],
     [
+      "boilerplate-generator",
+      "1.0.0"
+    ],
+    [
       "callback-hook",
       "1.0.0"
     ],
@@ -34,23 +38,23 @@
     ],
     [
       "coffeescript",
-      "1.0.2"
+      "1.0.3"
+    ],
+    [
+      "ddp",
+      "1.0.8"
     ],
     [
       "deps",
-      "1.0.2"
+      "1.0.3"
     ],
     [
       "ejson",
-      "1.0.1"
-    ],
-    [
-      "email",
-      "1.0.0"
+      "1.0.2"
     ],
     [
       "follower-livedata",
-      "1.0.0"
+      "1.0.1"
     ],
     [
       "geojson-utils",
@@ -62,7 +66,7 @@
     ],
     [
       "htmljs",
-      "1.0.0-cordova1"
+      "1.0.1"
     ],
     [
       "id-map",
@@ -94,11 +98,7 @@
     ],
     [
       "less",
-      "1.0.5"
-    ],
-    [
-      "livedata",
-      "1.0.0"
+      "1.0.8"
     ],
     [
       "localstorage",
@@ -106,31 +106,27 @@
     ],
     [
       "logging",
-      "1.0.0"
-    ],
-    [
-      "meteor",
-      "1.0.2"
-    ],
-    [
-      "minifiers",
-      "1.0.0"
-    ],
-    [
-      "minimongo",
-      "1.0.1"
-    ],
-    [
-      "mongo-livedata",
       "1.0.3"
     ],
     [
-      "npm-bcrypt",
-      "0.7.7"
+      "meteor",
+      "1.1.0"
+    ],
+    [
+      "minifiers",
+      "1.1.0"
+    ],
+    [
+      "minimongo",
+      "1.0.3"
+    ],
+    [
+      "mongo",
+      "1.0.5"
     ],
     [
       "observe-sequence",
-      "1.0.0"
+      "1.0.2"
     ],
     [
       "ordered-dict",
@@ -142,11 +138,11 @@
     ],
     [
       "reactive-dict",
-      "1.0.1"
+      "1.0.2"
     ],
     [
       "reactive-var",
-      "1.0.1-rc0"
+      "1.0.1"
     ],
     [
       "retry",
@@ -154,11 +150,11 @@
     ],
     [
       "routepolicy",
-      "1.0.0-cordova1"
+      "1.0.1"
     ],
     [
       "service-configuration",
-      "1.0.0"
+      "1.0.1"
     ],
     [
       "sha",
@@ -166,35 +162,31 @@
     ],
     [
       "softwarerero:accounts-t9n",
-      "0.0.17"
+      "0.0.20"
     ],
     [
       "spacebars",
-      "1.0.0"
+      "1.0.1"
     ],
     [
       "spacebars-compiler",
-      "1.0.0"
+      "1.0.2"
     ],
     [
       "splendido:accounts-templates-core",
-      "0.0.28"
-    ],
-    [
-      "srp",
-      "1.0.0"
+      "0.9.4"
     ],
     [
       "templating",
-      "1.0.5"
+      "1.0.6"
     ],
     [
       "tracker",
-      "1.0.2-rc0"
+      "1.0.2"
     ],
     [
       "ui",
-      "1.0.1"
+      "1.0.2"
     ],
     [
       "underscore",
@@ -202,10 +194,14 @@
     ],
     [
       "webapp",
-      "1.0.3"
+      "1.1.1"
+    ],
+    [
+      "webapp-hashing",
+      "1.0.0"
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.28",
+  "toolVersion": "meteor-tool@1.0.31",
   "format": "1.0"
 }
