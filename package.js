@@ -57,7 +57,7 @@ Package.on_use(function(api, where) {
 
 Package.on_test(function(api) {
     api.use([
-        "accounts-templates-semantic-ui",
+        "splendido:accounts-templates-semantic-ui",
         "splendido:accounts-templates-core@0.9.3",
     ]);
 
