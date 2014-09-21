@@ -1,76 +1,32 @@
 <template name="atForm">
   {{#unless hide}}
-    <div class="ui fluid center aligned basic fitted segment at">
+    <div class="at-form">
       {{#if showTitle}}
-        <h3>{{title}}</h3>
+        {{> atTitle}}
       {{/if}}
       {{#if showSignInLink}}
-        <p class="at-signin-cta">
-          {{t9n "ifYouAlreadyHaveAnAccount"}} 
-          <a href="{{signInLink}}" id="at-signIn" class="at-link {{disabled}}">{{t9n "signin"}}</a>
-        </p>
+        {{> atSigninLink}}
       {{/if}}
       {{#if showOauthServices}}
-        <div class="at-social">
-          <div class="ui basic segment">
-            {{#each oauthService}}
-              {{> atSocial}}
-            {{/each}}
-          </div>
-        </div>
+        {{> atOauth}}
       {{/if}}
       {{#if showServicesSeparator}}
-        <div class="ui basic segment">
-          <div class="ui middle aligned grid email-option">
-            <div class="line-thru seven wide column"></div>
-            <div class="or-sign-in center aligned two wide column">{{t9n "OR"}}</div>
-            <div class="line-thru seven wide column"></div>
-          </div>
-        </div>
+        {{> atSep}}
       {{/if}}
-      {{#if overallError}}
-        <div id="atError">
-          <div class='ui error message'>
-            {{#each overallError}}
-              <p>{{errorText}}</p>
-            {{/each}}
-          </div>
-        </div>
+      {{#if showError}}
+        {{> atError}}
       {{/if}}
-      {{#if result}}
-        <div id="atResult">
-          <div class='ui success message'>{{result}}</div>
-        </div>
+      {{#if showResult}}
+        {{> atResult}}
       {{/if}}
-      {{#if showPwdService}}
-        <div class="ui left aligned basic fitted segment">
-          <form class="ui form at-form" id="at-form" novalidate>
-            {{#each fields}}
-              {{> atInput}}
-            {{/each}}
-            {{#if showForgotPasswordLink}}
-              <p><a href="{{forgotPwdLink}}" id="at-forgotPwd" class="at-link {{disabled}}">{{t9n "forgotPassword"}}</a></p>
-            {{/if}}
-            <input type="submit" class="ui fluid submit {{submitDisabled}} {{disabled}} button" id="at-btn" value="{{buttonText}}">
-          </form>
-          {{#if showSignUpLink}}
-            <p class="at-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{signUpLink}}" id="at-signUp" class="at-link {{disabled}}">{{t9n "signUp"}}</a></p>
-          {{/if}}
-        </div>
+      {{#if showPwdForm}}
+        {{> atPwdForm}}
+      {{/if}}
+      {{#if showSignUpLink}}
+        {{> atSignupLink}}
       {{/if}}
       {{#if showTermsLink}}
-        <p class="at-agreement">
-          {{t9n "clickAgree"}}
-          {{#if privacyUrl}}
-            <a href="{{privacyUrl}}" class="{{disabled}}">{{t9n "privacyPolicy"}}</a>
-          {{/if}}
-          {{#if showTermsAnd}}
-            {{t9n "and"}}
-          {{/if}}
-          {{#if termsUrl}}
-            <a href="{{termsUrl}}" class="{{disabled}}">{{t9n "terms"}}</a>
-          {{/if}}
-        </p>
+        {{> atTermsLink}}
       {{/if}}
     </div>
   {{/unless}}
