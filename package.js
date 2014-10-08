@@ -1,6 +1,6 @@
 Package.describe({
     summary: "Accounts Templates styled for Semantic UI.",
-    version: "0.9.10",
+    version: "0.9.11",
     name: "splendido:accounts-templates-semantic-ui",
     git: "https://github.com/splendido/accounts-templates-semantic-ui.git",
 });
@@ -18,7 +18,7 @@ Package.on_use(function(api, where) {
     ], ["client", "server"]);
 
     api.imply([
-        "splendido:accounts-templates-core@0.9.10",
+        "splendido:accounts-templates-core@0.9.11",
     ], ["client", "server"]);
 
     api.add_files([
@@ -58,7 +58,7 @@ Package.on_use(function(api, where) {
 Package.on_test(function(api) {
     api.use([
         "splendido:accounts-templates-semantic-ui",
-        "splendido:accounts-templates-core@0.9.10",
+        "splendido:accounts-templates-core@0.9.11",
     ]);
 
     api.use([
