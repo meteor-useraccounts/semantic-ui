@@ -1,4 +1,8 @@
 <template name="atInput">
+    {{> Template.dynamic template=templateName}}
+</template>
+
+<template name="atTextInput">
   <div class="at-input field {{#if hasError}}error{{/if}}">
     {{#if showLabels}}
       <label>
@@ -25,6 +29,31 @@
       {{#if hasError}}
         <div class="ui red pointing prompt label transition visible">{{errorText}}</div>
       {{/if}}
+    </div>
+  </div>
+</template>
+
+<template name="atCheckboxInput">
+  <div class="at-input inline field">
+    <div class="ui checkbox">
+      <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" {{disabled}}>
+      <label for="at-field-{{_id}}">{{displayName}}</label>
+    </div>
+  </div>
+</template>
+
+<template name="atSelectInput">
+  <div class="at-input field">
+    <label>{{displayName}}</label>
+    <div class="ui fluid selection dropdown">
+      <div class="default text">Select</div>
+      <i class="dropdown icon"></i>
+      <input type="hidden" name="at-field-{{_id}}">
+      <div class="menu">
+        {{#each select}}
+          <div class="item" data-value="{{value}}">{{text}}</div>
+        {{/each}}
+      </div>
     </div>
   </div>
 </template>
