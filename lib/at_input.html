@@ -48,12 +48,26 @@
     <div class="ui fluid selection dropdown">
       <div class="default text">Select</div>
       <i class="dropdown icon"></i>
-      <input type="hidden" name="at-field-{{_id}}">
+      <input type="hidden" id="at-field-{{_id}}" name="at-field-{{_id}}">
       <div class="menu">
-        {{#each select}}
+        {{#each values}}
           <div class="item" data-value="{{value}}">{{text}}</div>
         {{/each}}
       </div>
     </div>
+  </div>
+</template>
+
+<template name="atRadioInput">
+  <div class="grouped inline fields">
+    <label>{{displayName}}</label>
+    {{#each values}}
+      <div class="at-input field">
+        <div class="ui radio checkbox">
+          <input id="at-field-{{id}}-choice-{{value}}" type="radio" name="at-field-{{id}}" value={{value}}>
+          <label for="at-field-{{id}}-choice-{{value}}">{{text}}</label>
+        </div>
+      </div>
+    {{/each}}
   </div>
 </template>
