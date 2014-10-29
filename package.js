@@ -1,12 +1,12 @@
 Package.describe({
     summary: "Accounts Templates styled for Semantic UI.",
     version: "0.11.0",
-    name: "splendido:accounts-templates-semantic-ui",
-    git: "https://github.com/splendido/accounts-templates-semantic-ui.git",
+    name: "useraccounts:semantic",
+    git: "https://github.com/meteor-useraccounts/semantic.git",
 });
 
 Package.on_use(function(api, where) {
-    api.versionsFrom("METEOR@0.9.2.2");
+    api.versionsFrom("METEOR@1.0");
 
     api.use([
         "less",
@@ -14,11 +14,11 @@ Package.on_use(function(api, where) {
     ], "client");
 
     api.use([
-        "splendido:accounts-templates-core",
+        "useraccounts:core",
     ], ["client", "server"]);
 
     api.imply([
-        "splendido:accounts-templates-core@0.11.0",
+        "useraccounts:core@0.11.0",
     ], ["client", "server"]);
 
     api.add_files([
@@ -57,8 +57,8 @@ Package.on_use(function(api, where) {
 
 Package.on_test(function(api) {
     api.use([
-        "splendido:accounts-templates-semantic-ui",
-        "splendido:accounts-templates-core@0.11.0",
+        "useraccounts:semantic",
+        "useraccounts:core@0.11.0",
     ]);
 
     api.use([
