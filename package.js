@@ -2,7 +2,7 @@ Package.describe({
     summary: "Accounts Templates styled for Semantic UI.",
     version: "1.0.0",
     name: "useraccounts:semantic-ui",
-    git: "https://github.com/meteor-useraccounts/semantic.git",
+    git: "https://github.com/meteor-useraccounts/semantic-ui.git",
 });
 
 Package.on_use(function(api, where) {
@@ -57,7 +57,7 @@ Package.on_use(function(api, where) {
 
 Package.on_test(function(api) {
     api.use([
-        "useraccounts:semantic",
+        "useraccounts:semantic-ui",
         "useraccounts:core@1.0.0",
     ]);
 
