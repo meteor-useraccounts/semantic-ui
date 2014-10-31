@@ -1,0 +1,5 @@
+<template name="atNavButton">
+  <div class="item">
+    <div class="ui button" id="at-nav-button">{{text}}</div>
+  </div>
+</template>
