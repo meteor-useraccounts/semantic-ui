@@ -9,11 +9,11 @@ This package depends on [accounts-templates-core](https://atmospherejs.com/usera
 Learn more [here](http://accounts-templates.meteor.com) or have a look at a [live demo application](http://accounts-templates-semantic-ui.meteor.com) or at the full [documentation](https://github.com/splendido/accounts-templates-core).
 
 
-## Warning!
+## Bring Your Own Semantic-UI
 
 Adding this package with `mrt add useraccounts:semantic-ui` does not add any other packages providing Semantic UI. This is to let you choose the flavour you prefer, being it compiled, less, sass, or from CDN!
 
-At the moment it is up to date with Semantic UI 0.19.0.
+At the moment it is up to date with Semantic UI 0.19.3.
 
 
 ## Contributing
