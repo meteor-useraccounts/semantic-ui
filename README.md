@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/useraccounts/semantic-ui.svg?branch=master)](https://travis-ci.org/useraccounts/semantic-ui)
-accounts-templates-semantic-ui
-==============================
+useraccounts:semantic-ui
+========================
 
 Meteor sign up and sign in templates styled for Semantic UI
 
 This package depends on [accounts-templates-core](https://atmospherejs.com/useraccounts/core)
 
-Learn more [here](http://accounts-templates.meteor.com) or have a look at a [live demo application](http://accounts-templates-semantic-ui.meteor.com) or at the full [documentation](https://github.com/splendido/accounts-templates-core).
+Learn more [here](http://accounts-templates.meteor.com) or have a look at a [live demo application](http://accounts-templates-semantic-ui.meteor.com) or at the full [documentation](https://github.com/useraccounts/core).
 
 
 ## Bring Your Own Semantic-UI
