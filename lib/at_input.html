@@ -3,7 +3,7 @@
 </template>
 
 <template name="atTextInput">
-  <div class="at-input field {{#if hasError}}error{{/if}}">
+  <div class="at-input field {{#if isValidating}}validating{{/if}} {{#if hasError}}error{{/if}}">
     {{#if showLabels}}
       <label>
         {{displayName}}
@@ -11,15 +11,8 @@
     {{/if}}
     <div class="ui labeled icon input">
       <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" {{disabled}} autocapitalize="none" autocorrect="off">
-      {{#if negativeFeedback}}
-        {{#if hasError}}
-          <i class="remove icon"></i>
-        {{/if}}
-      {{/if}}
-      {{#if positiveFeedback}}
-        {{#if hasSuccess}}
-          <i class="green checkmark icon"></i>
-        {{/if}}
+      {{#if hasIcon}}
+        <i class="{{iconClass}} icon"></i>
       {{/if}}
       {{#if required}}
         <div class="ui corner label">
