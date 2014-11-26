@@ -1,6 +1,6 @@
 <template name="atForm">
   {{#unless hide}}
-    <div class="at-form ui fluid center aligned basic fitted segment">
+    <div class="at-form ui large fluid {{#if showError}} error {{/if}} {{#if showResult}} success {{/if}} form segment">
       {{#if showTitle}}
         {{> atTitle}}
       {{/if}}

@@ -13,7 +13,7 @@ Learn more [here](http://accounts-templates.meteor.com) or have a look at a [liv
 
 Adding this package with `meteor add useraccounts:semantic-ui` does not add any other packages providing Semantic UI. This is to let you choose the flavour you prefer, being it compiled, less, sass, or from CDN!
 
-At the moment it is up to date with Semantic UI 0.19.3.
+At the moment it is up to date with Semantic UI 1.0.
 
 
 ## Contributing
