@@ -3,27 +3,20 @@
 </template>
 
 <template name="atTextInput">
-  <div class="at-input {{#if required}} required {{/if}} {{#if isValidating}} validating {{/if}} {{#if hasError}}error{{/if}} field">
+  <div class="at-input {{#if required}} required {{/if}} {{#if isValidating}} validating {{/if}} field {{#if hasError}}error{{/if}}">
     {{#if showLabels}}
       <label>
         {{displayName}}
       </label>
     {{/if}}
-    <div class="ui corner labeled icon input">
+    <div class="ui fluid input icon {{#if isValidating}} loading {{/if}}">
       <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" {{disabled}} autocapitalize="none" autocorrect="off">
       {{#if hasIcon}}
         <i class="{{iconClass}} icon"></i>
       {{/if}}
-      {{#if required}}
-        <div class="ui corner label">
-          <i class="asterisk icon"></i>
-        </div>
-      {{/if}}
     </div>
     {{#if hasError}}
-      <div class="at-wrap">
-        <div class="ui large red pointing label">{{errorText}}</div>
-      </div>
+      <div class="ui red pointing label">{{errorText}}</div>
     {{/if}}
   </div>
 </template>
