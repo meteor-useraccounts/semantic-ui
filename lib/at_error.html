@@ -2,9 +2,17 @@
   <div class="at-error ui icon error message">
     <i class="warning icon"></i>
     <div class="content">
-      {{#each error}}
-        <p>{{errorText}}</p>
-      {{/each}}
+      {{#if singleError}}
+        {{#each error}}
+          <p>{{errorText}}</p>
+        {{/each}}
+      {{else}}
+        <ul class="list">
+          {{#each error}}
+            <li>{{errorText}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}     
     </div>
   </div>
 </template>
