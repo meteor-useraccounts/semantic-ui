@@ -1,6 +1,6 @@
 Package.describe({
     summary: "Accounts Templates styled for Semantic UI.",
-    version: "1.8.1",
+    version: "1.9.0",
     name: "useraccounts:semantic-ui",
     git: "https://github.com/meteor-useraccounts/semantic-ui.git",
 });
@@ -18,7 +18,7 @@ Package.on_use(function(api, where) {
     ], ["client", "server"]);
 
     api.imply([
-        "useraccounts:core@1.8.1",
+        "useraccounts:core@1.9.0",
     ], ["client", "server"]);
 
     api.add_files([
@@ -64,7 +64,7 @@ Package.on_use(function(api, where) {
 Package.on_test(function(api) {
     api.use([
         "useraccounts:semantic-ui",
-        "useraccounts:core@1.8.1",
+        "useraccounts:core@1.9.0",
     ]);
 
     api.use([
