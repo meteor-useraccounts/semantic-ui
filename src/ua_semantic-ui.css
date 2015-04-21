@@ -1,0 +1,22 @@
+.ua-title {
+  margin-bottom: 1rem;
+}
+.ua-social-btn {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+.ua-wrap {
+  text-align: center;
+}
+.ua-left {
+  text-align: left !important;
+}
+.ua-input.validating * {
+  cursor: progress;
+}
+.ua-pwd-link {
+  margin-bottom: 1rem;
+}
+.ua-signin-link, .ua-signup-link {
+  margin-top: 1rem;
+}
