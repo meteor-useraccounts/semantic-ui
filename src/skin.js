@@ -37,6 +37,17 @@ if (module) {
 }
 
 
+// Separator Module
+module = UserAccounts._modules.separator;
+if (module) {
+  module.skins.sui = {
+    container: function() {
+      return 'ui horizontal divider';
+    }
+  };
+}
+
+
 // OAuth Module
 module = UserAccounts._modules.oauth;
 if (module) {
