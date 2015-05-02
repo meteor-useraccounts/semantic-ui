@@ -28,6 +28,8 @@ Package.on_use(function(api, where) {
     'lib/at_form.js',
     'lib/at_input.html',
     'lib/at_input.js',
+    'lib/at_message.html',
+    'lib/at_message.js',
     'lib/at_nav_button.html',
     'lib/at_nav_button.js',
     'lib/at_oauth.html',
@@ -58,8 +60,6 @@ Package.on_use(function(api, where) {
     'lib/at_title.js',
     'lib/full_page_at_form.html',
     'lib/at_semantic-ui.less',
-    'lib/at_message.html',
-    'lib/at_message.js'
   ], ['client']);
 });
 
