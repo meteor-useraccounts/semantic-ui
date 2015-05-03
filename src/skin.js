@@ -69,3 +69,13 @@ if (module) {
     return service === 'google' ? 'google plus' : service;
   };
 }
+
+// Error Module
+module = UserAccounts._modules.error;
+if (module) {
+  module.skins.sui = {
+    container: function() {
+      return 'ui icon error message';
+    }
+  };
+}
