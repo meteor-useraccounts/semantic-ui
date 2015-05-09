@@ -4,58 +4,54 @@
 */
 'use strict';
 
-var module;
-
 // ------------------------------------------
 //  Logs the start of execution for this file
 // ------------------------------------------
 UALog.trace('Loading main.js');
 
+var
+  frameworkName = 'sui',
+  frameworkSkin = {
+    uaForm: {
+      container: function() {
+        return 'ui large fluid segment';
+      }
+    },
+    title: {
+      h2: 'ui center aligned dividing header'
+    },
+    separator: {
+      container: 'ui horizontal divider'
+    },
+    error: {
+      container: 'ui icon error message'
+    },
+    message: {
+      container: 'ui icon info message'
+    },
+    success: {
+      container: 'ui icon success message'
+    },
+    oauth: {
+      button: 'ui fluid labeled icon large button'
+    },
+  }
+;
+
 
 // Add SUI framework to UserAccounts object
-UserAccounts.frameworks.push('sui');
-UserAccounts.currentFramework = 'sui';
+UALog.trace('Adding SemanticUI framework to UserAccounts');
+UserAccounts.frameworks.push(frameworkName);
+UserAccounts.currentFramework = frameworkName;
 
-
-// uaForm template
-UserAccounts.skins.sui = {
-  container: function() {
-    // at-form ui large fluid {{#if showError}} error {{/if}}
-    // {{#if showResult}} success {{/if}} form segment
-    return 'ui large fluid form segment';
-  }
-};
-
-// Title Module
-module = UserAccounts._modules.title;
-if (module) {
-  module.skins.sui = {
-    h2: function() {
-      return 'ui center aligned dividing header';
-    }
-  };
-}
-
-
-// Separator Module
-module = UserAccounts._modules.separator;
-if (module) {
-  module.skins.sui = {
-    container: function() {
-      return 'ui horizontal divider';
-    }
-  };
-}
+// Apply SUI skin to UserAccounts' modules
+UALog.trace('Apllying skin to UserAccounts');
+UserAccounts.applySkin(frameworkName, frameworkSkin);
 
 
 // OAuth Module
-module = UserAccounts._modules.oauth;
+var module = UserAccounts._modules.oauth;
 if (module) {
-  module.skins.sui = {
-    button: function() {
-      return 'ui fluid labeled icon large button';
-    }
-  };
 
   // Overwrite original getIcon
   UALog.trace('Overriding oauth module getIcon');
@@ -67,15 +63,5 @@ if (module) {
   UALog.trace('Overriding oauth module getName');
   module.getName = function(service) {
     return service === 'google' ? 'google plus' : service;
-  };
-}
-
-// Error Module
-module = UserAccounts._modules.error;
-if (module) {
-  module.skins.sui = {
-    container: function() {
-      return 'ui icon error message';
-    }
   };
 }
