@@ -33,7 +33,8 @@ var
       container: 'ui icon success message'
     },
     oauth: {
-      button: 'ui fluid labeled icon large button'
+      button: 'ui fluid labeled icon large button',
+      icon: 'icon',
     },
   }
 ;
