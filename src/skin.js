@@ -39,13 +39,8 @@ var
 ;
 
 
-// Add SUI framework to UserAccounts object
-UALog.trace('Adding SemanticUI framework to UserAccounts');
-UserAccounts.frameworks.push(frameworkName);
-UserAccounts.currentFramework = frameworkName;
-
 // Apply SUI skin to UserAccounts' modules
-UALog.trace('Apllying skin to UserAccounts');
+UALog.trace('Apllying Semantic UI skin to UserAccounts');
 UserAccounts.applySkin(frameworkName, frameworkSkin);
 
 
