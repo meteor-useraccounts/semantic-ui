@@ -1,18 +1,18 @@
 <template name="atError">
-  <div class="at-error ui icon error message">
+  <div class="at-error ui large icon error message">
     <i class="warning icon"></i>
     <div class="content">
       {{#if singleError}}
         {{#each error}}
-          <p>{{errorText}}</p>
+          <p><strong>{{errorText}}</strong></p>
         {{/each}}
       {{else}}
         <ul class="list">
           {{#each error}}
-            <li>{{errorText}}</li>
+            <li><strong>{{errorText}}</strong></li>
           {{/each}}
         </ul>
-      {{/if}}     
+      {{/if}}
     </div>
   </div>
 </template>
