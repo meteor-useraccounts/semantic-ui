@@ -2,9 +2,9 @@
 useraccounts:semantic-ui
 ========================
 
-Meteor sign up and sign in templates styled for Semantic UI
+Meteor sign up and sign in templates styled for Semantic UI.
 
-This package depends on [useraccounts:core](https://atmospherejs.com/useraccounts/core)
+This package depends on [useraccounts:core](https://atmospherejs.com/useraccounts/core).
 
 Learn more [here](http://useraccounts.meteor.com) or have a look at a [live demo application](http://useraccounts-semantic-ui.meteor.com/) or at the full [documentation](https://github.com/meteor-useraccounts/core).
 
@@ -13,7 +13,7 @@ Learn more [here](http://useraccounts.meteor.com) or have a look at a [live demo
 
 Adding this package with `meteor add useraccounts:semantic-ui` does not add any other packages providing Semantic UI. This is to let you choose the flavour you prefer, being it compiled, less, sass, or from CDN!
 
-At the moment it is up to date with Semantic UI 1.0.
+At the moment it is up to date with Semantic UI 2.0.7.
 
 
 ## Contributing

@@ -3,7 +3,7 @@
 </template>
 
 <template name="atTextInput">
-  <div class="at-input {{#if required}} required {{/if}} {{#if isValidating}} validating {{/if}} field {{#if hasError}}error{{/if}}">
+  <div class="at-input {{#if required}} required {{/if}} {{#if isValidating}} validating {{/if}} {{#if hasError}} error {{/if}} field">
     {{#if showLabels}}
       <label>
         {{displayName}}
@@ -24,14 +24,14 @@
 <template name="atCheckboxInput">
   <div class="at-input inline field">
     <div class="ui toggle checkbox">
-      <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" {{disabled}}>
+      <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" {{disabled}} tabindex="0" class="hidden">
       <label for="at-field-{{_id}}">{{displayName}}</label>
     </div>
   </div>
 </template>
 
 <template name="atSelectInput">
-  <div class="at-input {{#if required}} required {{/if}} {{#if hasError}}error{{/if}} field">
+  <div class="at-input {{#if required}} required {{/if}} {{#if hasError}} error {{/if}} field">
     <label>{{displayName}}</label>
     <div class="ui fluid selection dropdown">
       <input type="hidden" id="at-field-{{_id}}" name="at-field-{{_id}}">
@@ -57,7 +57,7 @@
     {{#each values}}
       <div class="at-input field">
         <div class="ui radio checkbox">
-          <input id="at-field-{{id}}-choice-{{value}}" type="radio" name="at-field-{{id}}" value= {{value}}>
+          <input id="at-field-{{id}}-choice-{{value}}" type="radio" name="at-field-{{id}}" value= {{value}} tabindex="0" class="hidden">
           <label for="at-field-{{id}}-choice-{{value}}">{{text}}</label>
         </div>
       </div>
