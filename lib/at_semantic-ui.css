@@ -1,28 +1,23 @@
 .at-title {
   margin-bottom: 1rem;
 }
-
 .at-social-btn {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
 }
-
 .at-wrap {
   text-align: center;
 }
-
 .at-left {
   text-align: left !important;
 }
-
 .at-input.validating * {
   cursor: progress;
 }
-
 .at-pwd-link {
   margin-bottom: 1rem;
 }
-
-.at-signin-link, .at-signup-link {
+.at-signin-link,
+.at-signup-link {
   margin-top: 1rem;
 }
