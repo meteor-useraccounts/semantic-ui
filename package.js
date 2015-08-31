@@ -24,7 +24,7 @@ Package.onUse(function(api) {
   ], Both);
 
   api.use([
-    'jag:pince@0.0.5',
+    'jag:pince@0.0.9',
     'templating',
     'useraccounts:base@2.0.0',
   ], Client);
