@@ -11,6 +11,12 @@
 .at-left {
   text-align: left !important;
 }
+.at-grid {
+  height: 100%;
+}
+.at-column {
+  max-width: 520px;
+}
 .at-input.validating * {
   cursor: progress;
 }
