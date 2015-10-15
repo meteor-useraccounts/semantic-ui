@@ -1,4 +1,6 @@
+[![Meteor Icon](http://icon.meteor.com/package/useraccounts:semantic-ui)](https://atmospherejs.com/useraccounts/semantic-ui)
 [![Build Status](https://travis-ci.org/meteor-useraccounts/semantic-ui.svg?branch=master)](https://travis-ci.org/meteor-useraccounts/semantic-ui)
+
 useraccounts:semantic-ui
 ========================
 
